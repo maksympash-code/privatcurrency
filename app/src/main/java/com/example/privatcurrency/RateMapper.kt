@@ -8,6 +8,6 @@ fun ExchangeRateDto.toUi(): RateUi? {
     return RateUi(
         currency = cur,
         purchaseText = "Buy: %.4f".format(buy),
-        saleText = "Sale: %4.f".format(sell)
+        saleText = "Sale: %.4f".format(sell)
     )
 }

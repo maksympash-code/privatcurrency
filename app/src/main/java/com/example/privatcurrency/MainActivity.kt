@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnLoad.setOnClickListener {
-            val date = binding.etDate.text.toString().ifEmpty { "26.10.2025" }
+            val date = binding.etDate.text.toString().ifEmpty { "01.12.2014" }
             viewModel.loadRates(date)
         }
 

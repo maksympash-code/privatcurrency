@@ -6,11 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
+
     private val _uiState = MutableLiveData(MainUiState())
     val uiState: LiveData<MainUiState> = _uiState
 
-    fun loadRates(date: String){
+    fun loadRates(date: String) {
         viewModelScope.launch {
             _uiState.value = _uiState.value?.copy(isLoading = true, error = null)
 
@@ -25,7 +26,9 @@ class MainViewModel: ViewModel() {
                     rates = list,
                     error = null
                 )
-            } catch (e: Exception){
+            } catch (e: Exception) {
+                e.printStackTrace() // тимчасово, щоб бачити в логах
+
                 _uiState.value = _uiState.value?.copy(
                     isLoading = false,
                     error = e.message ?: "Unknown error"

@@ -10,6 +10,6 @@ interface PrivatApi {
     @GET("p24api/exchange_rates")
     suspend fun getExchangeRates(
         @Query("date") date: String,
-        @Query("json") json: String,
+        @Query("json") json: String = "",
     ) : ExchangeResponse
 }

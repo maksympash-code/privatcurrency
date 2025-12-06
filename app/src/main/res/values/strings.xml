@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">privatcurrency</string>
+    <string name="privatbank_currencies">PrivatBank currencies</string>
+    <string name="_26.10.2025">26.10.2025</string>
+    <string name="load">Load</string>
 </resources>

@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RatesAdapter(private val dataSet: Array<String>) :
-    RecyclerView.Adapter<RatesAdapter.RateViewHolder>() {
+class RatesAdapter() : RecyclerView.Adapter<RatesAdapter.RateViewHolder>() {
 
         private val items = mutableListOf<RateUi>()
 
@@ -37,6 +36,6 @@ class RatesAdapter(private val dataSet: Array<String>) :
         holder.tvSale.text = item.saleText
     }
 
-    override fun getItemCount() = dataSet.size
+    override fun getItemCount() = items.size
 
 }
